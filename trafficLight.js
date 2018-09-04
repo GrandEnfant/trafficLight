@@ -27,52 +27,61 @@ ctx.stroke();
 //var green = document.getElementsByClassName("greenLight")[0];
 
 
-
+var yellow = document.getElementsByClassName("yellowLight")[0];
+var red = document.getElementsByClassName('redLight')[0];
+var green = document.getElementsByClassName("greenLight")[0];
 
 function redF() {
     'use strict';
-    var red = document.getElementsByClassName('redLight')[0];
+    
     red.style.backgroundColor = "red";
+    yellow.style.backgroundColor = "#9f990b";
+    green.style.backgroundColor = "#0c5706";
+    
     //document.getElementsByClassName('redLight').style.backgroundColor = '#2C81b7';
 }
 function yellowF() {
     'use strict';
-    var yellow = document.getElementsByClassName("yellowLight")[0];
+    
     yellow.style.backgroundColor = "yellow";
+    red.style.backgroundColor = "#5d061a";
+    green.style.backgroundColor = "#0c5706";
 }
 
 function greenF() {
     'use strict';
-    var green = document.getElementsByClassName("greenLight")[0];
+    
     green.style.backgroundColor = "green";
+    yellow.style.backgroundColor = "#9f990b";
+    red.style.backgroundColor = "#5d061a";
 }
-var setT = setTimeout(redF, 3000);
-var setY = setTimeout(yellowF, 6000);
-var setG = setTimeout(greenF, 9000);
+
 
 
 var currentColor = 0;
 
 function switcher() {
     'use strict';
-    if (currentColor = 0) {redF();
+    if (currentColor === 0) {redF();
                    currentColor = 1;
                    }
     switch (currentColor) {
     case 1:
             yellowF();
-    current = 2;
+    currentColor = 2;
     break;
             
     case 2:
     greenF();
-    current = 3;
+    currentColor = 3;
     break;
             
-    case 3: 
+    case 3:
     redF();
-    current = 1;
+    currentColor = 1;
             break;
 } }
-
+var setT = setTimeout(redF, 3000);
+var setY = setTimeout(yellowF, 6000);
+var setG = setTimeout(greenF, 9000);
 //document.getElementByClass ("redLight").style.backgroundColor = "grey";
