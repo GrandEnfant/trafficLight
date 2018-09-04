@@ -21,14 +21,26 @@ ctx.arc(375, 650, 100, 0*Math.PI, 2*Math.PI, true);
 ctx.strokeStyle = "green";
 ctx.stroke();
 */
+//var red = document.getElementsByClassName("redLight")[0];
+var yellow = document.getElementsByClassName("yellowLight")[0];
+var green = document.getElementsByClassName("greenLight")[0];
 
-var test = document.getElementsByClassName ("redLight");
-var time = 0;
-function func() {
- test.style.marginLeft = time + 'px'; 
- time = time + 3;
- } 
-setInterval(func, 5000);
- 
+var setT = setTimeout(redF, 3000);
+
+
+function redF() {
+   var red = document.getElementsByClassName("redLight")[0];
+    red.style.backgroundColor = "red";
+        
+}
+function yellowF() {
+    
+    yellow.style.backgroundColor = "red";
+}
+
+function greenF() {
+    
+    green.style.backgroundColor = "red";
+}
 
 //document.getElementByClass ("redLight").style.backgroundColor = "grey";
