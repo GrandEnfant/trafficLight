@@ -54,34 +54,48 @@ function greenF() {
     green.style.backgroundColor = "green";
     yellow.style.backgroundColor = "#9f990b";
     red.style.backgroundColor = "#5d061a";
+    
+}
+function redYellowF() {
+    'use strict';
+    
+    green.style.backgroundColor = "#0c5706";
+    yellow.style.backgroundColor = "yellow";
+    red.style.backgroundColor = "red";
+    
 }
 
 
 
-var currentColor = 0;
+var currentColor = 1;
 
 function switcher() {
     'use strict';
-    if (currentColor === 0) {redF();
-                   currentColor = 1;
-                   }
+
     switch (currentColor) {
+    /*case 0:
+        yellowF();
+        currentColor = 2;
+        break;
+      */
     case 1:
-            yellowF();
-    currentColor = 2;
-    break;
+        greenF();
+        currentColor = 3;
+        break;
             
     case 2:
-    greenF();
-    currentColor = 3;
-    break;
-            
-    case 3:
-    redF();
-    currentColor = 1;
-            break;
-} }
-var setT = setTimeout(redF, 3000);
-var setY = setTimeout(yellowF, 6000);
-var setG = setTimeout(greenF, 9000);
+        redYellowF();
+        currentColor = 1;
+        break;
+    
+
+    case 3: redF();
+        currentColor = 1;
+        break;
+}
+}
+var setT = setTimeout(redF, 0);
+var setRY = setTimeout(redYellowF, 1500);
+//var setY = setTimeout(yellowF, 3000);
+var setG = setTimeout(greenF, 6000);
 //document.getElementByClass ("redLight").style.backgroundColor = "grey";
