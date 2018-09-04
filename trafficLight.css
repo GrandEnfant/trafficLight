@@ -6,9 +6,10 @@ a { /* Comment */ color: /* Comment */ Red; }
 
 
 
+
 .redLight {
  border-radius: 50%;
- background-color: red; 
+ background-color: #5d061a; 
  width: 100px;
  height: 100px;  
  
@@ -16,7 +17,7 @@ a { /* Comment */ color: /* Comment */ Red; }
 
 .yellowLight {
  border-radius: 50%;
- background-color: yellow; 
+ background-color: #9f990b; 
  width: 100px;
  height: 100px;  
  
@@ -24,7 +25,7 @@ a { /* Comment */ color: /* Comment */ Red; }
  .greenLight {
   
  border-radius: 50%;
- background-color: green; 
+ background-color: #0c5706; 
  width: 100px;
  height: 100px;  
  }
