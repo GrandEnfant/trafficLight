@@ -97,5 +97,11 @@ function switcher() {
 var setT = setTimeout(redF, 0);
 var setRY = setTimeout(redYellowF, 1500);
 //var setY = setTimeout(yellowF, 3000);
-var setG = setTimeout(greenF, 6000);
+var setG = setTimeout(greenF, 3000);
+var setClear = setTimeout (clearTimeI, 6000);
 //document.getElementByClass ("redLight").style.backgroundColor = "grey";
+
+function clearTimeO () {
+var clearTimeG = clearTimeout (setG);
+var clearTimeRY = clearTimeout (setRY);
+var clearTimeT = clearTimeout (setT);}
