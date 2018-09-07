@@ -1,114 +1,35 @@
-/*
-var trafficLight = document.getElementById ("trafficLight");
-ctx = trafficLight.getContext('2d'); 
 
 
-ctx.fillStyle = "grey" ;
- ctx.fillRect (250, 0, 250, 750);
 
-
-ctx.arc(375, 187.5, 100, 0*Math.PI, 2*Math.PI, true);
-ctx.strokeStyle = "red";
-ctx.stroke();
-
-
-ctx.arc(375, 425, 100, 0*Math.PI, 2*Math.PI, true);
-ctx.strokeStyle = "yellow";
-ctx.stroke();
-
-
-ctx.arc(375, 650, 100, 0*Math.PI, 2*Math.PI, true);
-ctx.strokeStyle = "green";
-ctx.stroke();
-*/
-//var red = document.getElementsByClassName("redLight")[0];
-
-//var yellow = document.getElementsByClassName("yellowLight")[0];
-//var green = document.getElementsByClassName("greenLight")[0];
-
-
+var red = document.getElementsByClassName("redLight")[0];
 var yellow = document.getElementsByClassName("yellowLight")[0];
-var red = document.getElementsByClassName('redLight')[0];
 var green = document.getElementsByClassName("greenLight")[0];
+
+//получили элементы
 
 function redF() {
     'use strict';
-    
     red.style.backgroundColor = "red";
     yellow.style.backgroundColor = "#9f990b";
     green.style.backgroundColor = "#0c5706";
-    
-    //document.getElementsByClassName('redLight').style.backgroundColor = '#2C81b7';
+    var start = setTimeout(yellowF, 3000);
 }
-/*function yellowF() {
+
+function yellowF() {
     'use strict';
-    
     yellow.style.backgroundColor = "yellow";
-    red.style.backgroundColor = "#5d061a";
     green.style.backgroundColor = "#0c5706";
-}*/
+     red.style.backgroundColor = "red";
+    var startt = setTimeout(greenF, 3000);
+}
 
 function greenF() {
     'use strict';
-    
     green.style.backgroundColor = "green";
     yellow.style.backgroundColor = "#9f990b";
     red.style.backgroundColor = "#5d061a";
-    
-}
-function redYellowF() {
-    'use strict';
-    
-    green.style.backgroundColor = "#0c5706";
-    yellow.style.backgroundColor = "yellow";
-    red.style.backgroundColor = "red";
-    
+    var starttt = setTimeout(redF, 3000);
+
 }
 
-function SetIntervalRed() {
-    var SIR = setInterval(redF, 3000);   
-}
-
-function SetIntervalYellowRed() {
-    var SIYR = setInterval(redYellowF, 2500);
-}
-
-function SetIntervalGreen() {
-    var SIG = setInterval(greenF, 3000);
-}
-
-
-var currentColor = 1;
-
-function switcher() {
-    'use strict';
-
-    switch (currentColor) {
-    /*case 0:
-        yellowF();
-        currentColor = 2;
-        break;
-      */
-    case 1:
-        greenF();
-        currentColor = 3;
-        break;
-            
-    case 2:
-        redYellowF();
-        currentColor = 1;
-        break;
-    
-
-    case 3: redF();
-        currentColor = 1;
-        break;
-}
-}
-
-var STORed = setTimeout(SetIntervalRed(), 0);
-var STOYR = setTimeout(SetIntervalYellowRed(), 3000);
-var STOG = setTimeout(SetIntervalGreen(), 3000);
-
-//document.getElementByClass ("redLight").style.backgroundColor = "grey";
-
+redF();
