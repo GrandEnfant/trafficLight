@@ -5,8 +5,10 @@ var red = document.getElementsByClassName("redLight")[0];
 var yellow = document.getElementsByClassName("yellowLight")[0];
 var green = document.getElementsByClassName("greenLight")[0];
 
+var inputRed = document.getElementsByName("inputRed")[0].value;
+var inputGreen = document.getElementsByName("inputGreen")[0].value;
 //получили элементы
-
+ alert(inputRed);
 function redF() {
     'use strict';
     red.style.backgroundColor = "red";
@@ -19,7 +21,7 @@ function yellowF() {
     'use strict';
     yellow.style.backgroundColor = "yellow";
     green.style.backgroundColor = "#0c5706";
-     red.style.backgroundColor = "red";
+    red.style.backgroundColor = "red";
     var startt = setTimeout(greenF, 3000);
 }
 
@@ -33,3 +35,5 @@ function greenF() {
 }
 
 redF();
+
+

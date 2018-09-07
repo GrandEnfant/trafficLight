@@ -29,3 +29,7 @@ a { /* Comment */ color: /* Comment */ Red; }
  width: 100px;
  height: 100px;  
  }
+.input {
+    padding-top: 25px;
+    float:right;
+}
