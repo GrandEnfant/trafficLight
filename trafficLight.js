@@ -8,7 +8,6 @@ var green = document.getElementsByClassName("greenLight")[0];
 var inputRed = document.getElementsByName("inputRed")[0].value;
 var inputGreen = document.getElementsByName("inputGreen")[0].value;
 //получили элементы
- alert(inputRed);
 function redF() {
     'use strict';
     red.style.backgroundColor = "red";
@@ -22,7 +21,7 @@ function yellowF() {
     yellow.style.backgroundColor = "yellow";
     green.style.backgroundColor = "#0c5706";
     red.style.backgroundColor = "red";
-    var startt = setTimeout(greenF, 3000);
+    var startt = setTimeout(greenF, inputGreen);
 }
 
 function greenF() {
@@ -30,10 +29,11 @@ function greenF() {
     green.style.backgroundColor = "green";
     yellow.style.backgroundColor = "#9f990b";
     red.style.backgroundColor = "#5d061a";
-    var starttt = setTimeout(redF, 3000);
-
+    var starttt = setTimeout(redF, inputRed);
 }
-
 redF();
-
+function Start() {
+    'use strict';
+    redF();
+}
 

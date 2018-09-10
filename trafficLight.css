@@ -33,3 +33,11 @@ a { /* Comment */ color: /* Comment */ Red; }
     padding-top: 25px;
     float:right;
 }
+.inputGreen {
+    background-color: rgba(53, 242, 37, 0.79); 
+}
+
+.inputRed {
+    background-color: rgba(245, 69, 69, 0.8); 
+    
+}
