@@ -1,6 +1,9 @@
 
 
 
+
+
+
 var red = document.getElementsByClassName("redLight")[0];
 var yellow = document.getElementsByClassName("yellowLight")[0];
 var green = document.getElementsByClassName("greenLight")[0];
